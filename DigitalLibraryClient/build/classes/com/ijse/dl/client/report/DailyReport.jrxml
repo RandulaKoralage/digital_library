@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2016-12-09T16:45:32 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DailyReport" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5781190f-c7e6-4c9c-91e9-75b9eaf67b4c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset" uuid="d7034913-9d74-4be4-abe9-da4581a9ef75">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="login" class="java.lang.String"/>
+	<parameter name="signup" class="java.lang.String"/>
+	<parameter name="access" class="java.lang.String"/>
+	<parameter name="downloads" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Subject" class="java.lang.String"/>
+	<field name="amount" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="97" splitType="Stretch">
+			<rectangle>
+				<reportElement stretchType="RelativeToTallestObject" x="2" y="0" width="550" height="21" forecolor="#A6ABDE" backcolor="#A6ABDE" uuid="3a3333e7-dcd8-4ab7-8df3-fa8a9e055fed"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="80" y="23" width="401" height="30" uuid="ade8d5b2-6c93-46dc-9498-99cac6a36443"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bell MT" size="24"/>
+				</textElement>
+				<text><![CDATA[Daily Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="58" width="120" height="21" uuid="d8b51006-8780-47cb-b593-b35fb173186f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Daily Report of ]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="263" y="58" width="181" height="21" uuid="53348b34-7989-4442-9d0e-7613c9519f9a"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="10" y="84" width="543" height="1" forecolor="#A6ABDE" backcolor="#5905EB" uuid="0fec8e7c-3622-49c7-933d-b9f1283727e7">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="131" height="20" uuid="faefa3c5-849a-4931-8995-401ef12636fe"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bell MT" size="14"/>
+				</textElement>
+				<text><![CDATA[Report Generated at : ]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="141" y="0" width="151" height="21" uuid="257422b5-9c85-404b-a5f8-707f44f7af63"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bell MT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="191" splitType="Stretch">
+			<staticText>
+				<reportElement x="158" y="26" width="160" height="28" uuid="1674f95b-92d5-4f86-a9b2-224cd720d33c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Number of LogIns]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="338" y="25" width="80" height="28" uuid="ab1e38d4-3b94-4e41-bcc4-8513953882c7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{login}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="56" width="80" height="28" uuid="3ac8f029-f8f5-49f2-8e14-f5cf1ead32ae"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{signup}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="158" y="56" width="160" height="28" uuid="7a1c166b-ea66-4b60-9148-f556329980a2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Number of SignUps]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="86" width="160" height="28" uuid="8ada87b1-4c4c-4906-849b-89e3ff1649b1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Number of Accesses]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="116" width="160" height="28" uuid="d78471a8-568e-4522-b9e6-40de42600f85"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Number of Downloads]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="338" y="116" width="130" height="28" uuid="c86e0a75-a629-4c38-8d69-e85867e57e6d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{downloads}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="86" width="80" height="28" uuid="2061e459-a2a4-4f7a-b2ff-5eae1bafa6bc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{access}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="170" width="151" height="21" uuid="ed4d5037-4d92-4feb-9c56-a32c3cf23d94"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Book]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="170" width="141" height="21" uuid="63554ddc-25ae-4b3b-b462-c5ffd22cd105"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Number of Views]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="7" width="151" height="30" uuid="37bbcb3f-5e28-4cad-93f6-89a3ded0e1cf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bell MT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Subject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="7" width="140" height="30" uuid="2f9e2a29-00c6-4690-8a21-abebf876310d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bell MT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="90" y="37" width="342" height="1" forecolor="#A6ABDE" backcolor="#5905EB" uuid="2537f41a-3b19-43e1-bafd-8a86c47adbfa">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="90" y="3" width="342" height="1" forecolor="#A6ABDE" backcolor="#5905EB" uuid="1af9d510-324f-4925-93a5-4aebb44140d2">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="59" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<rectangle>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="17" width="550" height="21" forecolor="#A6ABDE" backcolor="#A6ABDE" uuid="5668b539-fa38-4065-a3d8-747440f3735e"/>
+			</rectangle>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
